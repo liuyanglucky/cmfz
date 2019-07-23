@@ -1,0 +1,41 @@
+server:
+  port: 8989
+  servlet:
+    context-path: /
+#spring:
+#  mvc:
+#    static-path-pattern: /static/**
+
+#配置视图解析器
+spring:
+  mvc:
+    view:
+      prefix: / # 代表项目根目录
+      suffix: .jsp
+
+  ##配置数据源(oracle)
+  #  datasource:
+  #    type: org.apache.commons.dbcp.BasicDataSource
+  #    driver-class-name: oracle.jdbc.OracleDriver
+  #    username: hr
+  #    password: hr
+  #    url: jdbc:oracle:thin:@localhost:1521:xe
+
+  ##配置数据源(MySQL)
+  datasource:
+    type: org.apache.commons.dbcp.BasicDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/lp
+
+
+#配置mybatis相关
+mybatis:
+  mapper-locations: classpath:com/baizhi/mapper/*Mapper.xml
+  type-aliases-package: com.baizhi.entity
+  #文件大小设置
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
