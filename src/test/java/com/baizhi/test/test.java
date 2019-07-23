@@ -7,6 +7,10 @@ public class test {
         System.out.println(test2());
         System.out.println("================================");
         System.out.println(test3());
+        System.out.println("================================");
+        System.out.println("================================");
+        System.out.println("================================");
+        System.out.println("================================");
     }
 
     public static Integer test1() {
