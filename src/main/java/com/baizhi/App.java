@@ -2,6 +2,8 @@ package com.baizhi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import redis.clients.jedis.Jedis;
 import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
@@ -9,5 +11,10 @@ import tk.mybatis.spring.annotation.MapperScan;
 public class App {
     public static void main(String[] args) {
         SpringApplication.run(App.class,args);
+    }
+
+    @Bean
+    public Jedis getJedis() {
+        return new Jedis("192.168.171.129", 6379);//redis服务的机器ip，端口号
     }
 }

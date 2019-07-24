@@ -2,6 +2,7 @@ package com.baizhi.service;
 
 import com.baizhi.dao.BannerDao;
 import com.baizhi.entity.Banner;
+import com.baizhi.redisCache.RedisCache;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,6 +26,7 @@ public class BannerServiceImpl implements BannerService {
      * @return
      */
     @Override
+    @RedisCache
     public List<Banner> findAllBanner(Integer currentPage, Integer rows) {
         //计算本页开始开始第一条
         Integer begin = (currentPage-1)*rows;

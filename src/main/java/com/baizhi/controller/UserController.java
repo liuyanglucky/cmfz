@@ -1,9 +1,7 @@
 package com.baizhi.controller;
 
 import cn.afterturn.easypoi.excel.ExcelExportUtil;
-import cn.afterturn.easypoi.excel.ExcelImportUtil;
 import cn.afterturn.easypoi.excel.entity.ExportParams;
-import cn.afterturn.easypoi.excel.entity.ImportParams;
 import com.baizhi.entity.User;
 import com.baizhi.service.UserService;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -24,7 +22,7 @@ public class UserController {
 
     @RequestMapping("/allUser")
     public Map<String, Object> findAllUser(Integer page, Integer rows) {
-        System.out.println("进入到方法当中");
+        //System.out.println("进入到方法当中");
         //创建map
         Map<String, Object> map = new HashMap<>();
         //查询所有

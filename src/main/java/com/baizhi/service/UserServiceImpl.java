@@ -1,8 +1,9 @@
 package com.baizhi.service;
 
 import com.baizhi.dao.UserDao;
-import com.baizhi.entity.User;
 import com.baizhi.entity.Maps;
+import com.baizhi.entity.User;
+import com.baizhi.redisCache.RedisCache;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserDao userDao;
     @Override
+    @RedisCache
     public List<User> findAllUser(Integer currentPage, Integer rows) {
         //计算本页开始的第一条
         Integer begin = (currentPage-1)*rows;
