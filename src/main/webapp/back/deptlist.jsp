@@ -86,7 +86,7 @@
                         <div class="panel-body">
                             <ul class="list-group">
                                 <li class="list-group-item"><a href="javascript:$('#contentLayout').load('${pageContext.request.contextPath}/article/article-show.jsp')">查询所有文章</a></li>
-
+                                <li class="list-group-item"><a href="javascript:$('#contentLayout').load('${pageContext.request.contextPath}/article/article-search.jsp')">搜索文章</a></li>
                             </ul>
                         </div>
                     </div>

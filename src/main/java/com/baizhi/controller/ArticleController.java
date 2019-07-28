@@ -108,4 +108,12 @@ public class ArticleController {
         }
         return map;
     }
+    //---------------------------------------------------------------------------------
+    //es检索功能查询的实现
+    @RequestMapping("search")
+    public List<Article> search(String content){
+        //System.out.println("content:"+content);
+        List<Article> articles = articleService.selectArticleByContent(content);
+        return articles;
+    }
 }

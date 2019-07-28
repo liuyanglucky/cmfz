@@ -15,4 +15,6 @@ public interface ArticleService {
     void edit(Article article);
     //删除
     void del(Article article);
+    //es
+    List<Article> selectArticleByContent(String content);
 }
